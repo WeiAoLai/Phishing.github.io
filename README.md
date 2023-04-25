@@ -14,7 +14,12 @@
 
 釣魚網站顧名思義就是要釣魚！釣使用者的資料，所以這邊盡量還原了LINE登入頁面的樣子，然而金絮其外敗絮其內，裡面的重要元件都被我換成彈跳視窗，只要點擊登入就會被我帶到反詐騙官網，或是騙你中毒......等等驚喜，等你來發現！
 
-### JavaScript：
+## 差異：
+* 登入鍵的內容：目標網頁的登入鍵會檢查郵件地址是否符合格式，但我的不會。
+* 登入鍵的顏色：目標網頁有分預設(灰色)**禁止**，和符合條件(綠色)**可以傳送**，我的釣魚網站不管怎樣都可以傳送。
+* 彈跳視窗：目標網暫不會有彈跳視窗，我的會跳出一些警告，宣導反詐騙的重要XD
+
+## JavaScript：
 ```
 ** 蒐集使用者的手機號碼 **
 function click_MdBtn02(){
@@ -44,6 +49,4 @@ function click_MdBtn01(){
         alert("\n已替您將密碼上鎖 AuA\n\n如有問題，165專線歡迎您 :)")
     }
 ```
-<aside>
-❤ **釣魚網站LINE復刻版：** [LINE Login](https://weiaolai.github.io/Phishing.github.io/)
-</aside>
+❤ **釣魚網站LINE復刻版：**[LINE Login](https://weiaolai.github.io/Phishing.github.io/)
