@@ -1,11 +1,11 @@
 const MdBtn02 = document.getElementById("MdBtn02");
 MdBtn02.addEventListener('click', e => {});
 function click_MdBtn02(){
-    var phone = prompt("\n非常抱歉，因為系統問題暫時無法連線。\n\n改傳送手機驗證碼，請輸入手機號碼。");
-    if(phone != true){
+    var phone = prompt("\n非常抱歉，因為系統問題暫時無法連線。\n\n改傳送手機驗證碼，請輸入手機號碼。", "0900000000");
+    if (phone == null) {
         alert("\n您可以再次嘗試。");
     }
-    else if (phone == null || phone.length > 10 || phone.length < 10) {
+    else if (phone.length > 10 || phone.length < 10) {
         alert("\n輸入錯誤!請再次嘗試。");
     }
     else {
